@@ -38,6 +38,6 @@ with open('dataset/aarhus_parking.csv') as csvFile:
             continue
 
         garageCode = line[4]
-        producer.send('parking', key="", value={garageCode: line})
+        producer.send('parking-test', key="", value={garageCode: line})
         sleep(5)
 
