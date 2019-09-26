@@ -1,0 +1,82 @@
+extends layout
+
+block content
+  h1= timestamp
+  h1 Media inquinamento
+  p
+    b Ozone:
+    |
+    |  #{ozone_average}
+    |
+    if ozone_variation == "up"
+      img(width='13' height='13' src='images/up.png')
+    else if ozone_variation == "down"
+      img(width='13' height='13' src='images/down.png')
+    else
+      img(width='13' height='13' src='images/same.jpeg')
+  p
+    b Particulate matter:
+    |
+    |  #{particulate_average}
+    |
+    if particulate_variation == "up"
+      img(width='13' height='13' src='images/up.png')
+    else if particulate_variation == "down"
+      img(width='13' height='13' src='images/down.png')
+    else
+      img(width='13' height='13' src='images/same.jpeg')
+  p
+    b Carbon monoxide:
+    |
+    |  #{carbon_average}
+    |
+    if carbon_variation == "up"
+      img(width='13' height='13' src='images/up.png')
+    else if carbon_variation == "down"
+      img(width='13' height='13' src='images/down.png')
+    else
+      img(width='13' height='13' src='images/same.jpeg')
+  p
+    b Sulfur dioxide:
+    |
+    |  #{sulfur_average}
+    |
+    if sulfur_variation == "up"
+      img(width='13' height='13' src='images/up.png')
+    else if sulfur_variation == "down"
+      img(width='13' height='13' src='images/down.png')
+    else
+      img(width='13' height='13' src='images/same.jpeg')
+  p
+    b Nitrogen dioxide:
+    |
+    |  #{nitrogen_average}
+    |
+    if nitrogen_variation == "up"
+      img(width='13' height='13' src='images/up.png')
+    else if nitrogen_variation == "down"
+      img(width='13' height='13' src='images/down.png')
+    else
+      img(width='13' height='13' src='images/same.jpeg')
+
+  h1 Inquinamento nella piazza principale
+  p
+    b Ozone:
+    |
+    |  #{ozone_important}
+  p
+    b Particulate matter:
+    |
+    |  #{particulate_important}
+  p
+    b Carbon monoxide:
+    |
+    |  #{carbon_important}
+  p
+    b Sulfur dioxide:
+    |
+    |  #{sulfur_important}
+  p
+    b Nitrogen dioxide:
+    |
+    |  #{nitrogen_important}
